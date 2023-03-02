@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html leng="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home Stock Widget</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body onload="refreshTradeList()">
+
+    <div class="nav-sidebar">
+        <a class="active" href="/index.html">Home</a>
+        <a href="/details.html">Details</a>
+        <a href="/contact.html">Contact</a>
+    </div>
+
+    <main class="content-container">
+
+        <div class="watch-list-container"></div>
+
+        <form id="registration-form">
+            <table>
+                <tr>
+                    <th><label for="date">Date:</label></th>
+                    <th><label for="security">Search for a security</label></th>
+                    <th><label for="action">Action:</label></th>
+                    <th><label for="quantity">Quantity:</label></th>
+                    <th><label for="price">Price $:</label></th>
+                    <th><label for="total">Total $:</label></th>
+                    <th><label for="broker">Broker:</label></th>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>
+                        <input type="date" id="date" name="date" placeholder="Type here..." required>
+                    </th>
+                    <th>
+                        <input type="text" id="security" name="security" placeholder="Type here...">
+                        <ul id="search-results"></ul>
+                    </th>
+                    <th>
+                        <select id="action" name="action" required>
+                            <option value="">Select an option</option>
+                            <option value="Buy">Buy</option>
+                            <option value="Sell">Sell</option>
+                            <option value="Deposit">Deposit</option>
+                            <option value="Withdrawal">Withdrawal</option>
+                        </select>
+                    </th>
+                    <th>
+                        <input type="number" id="quantity" name="quantity" min="1" placeholder="Type here..." required>
+                    </th>
+                    <th>
+                        <input type="number" id="price" name="price" min="0" step="0.01" placeholder="Type here..."
+                            required>
+                    </th>
+                    <th>
+                        <input type="number" id="total" name="total" min="0" step="0.01" placeholder="Type here..."
+                            required>
+                    </th>
+                    <th>
+                        <select id="broker" name="broker" required>
+                            <option value="">Select an option</option>
+                            <option value="DNB">DNB</option>
+                            <option value="Nordnet">Nordnet</option>
+                        </select>
+                    </th>
+                </tr>
+            </table>
+            <button type="submit">Submit</button>
+        </form>
+        <div>
+            <div class="list-history">
+                <div>
+                    <div>
+                        <table>
+                            <tr>
+                                <th><span>Date:</span></th>
+                                <th><span>Security:</span></th>
+                                <th><span>Action:</span></th>
+                                <th><span>Quantity:</span></th>
+                                <th><span>Price $:</span></th>
+                                <th><span>Total $:</span></th>
+                                <th><span>Broker:</span></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <div class="list-container"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="/src/JS/registrateForm.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html leng="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home Stock Widget</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/src/CSS/contactform.css" />
+</head>
+
+<body>
+
+    <div class="nav-sidebar">
+        <a href="/index.html">Home</a>
+        <a href="/details.html">Details</a>
+        <a class="active" href="/contact.html">Contact</a>
+    </div>
+
+    <main class="content-container">
+        <form id="contact-form">
+            <div>
+                <label for="name"></label>
+                <input type="textCF" id="name" name="name" placeholder="Type name here..." required>
+            </div>
+            <div>
+                <label for="subject"></label>
+                <textarea type="subject" id="subject" name="subject" placeholder="Subject:"></textarea>
+            </div>
+            <div>
+                <label for="email"></label>
+                <input type="textCF" id="email" name="email" placeholder="Email:">
+            </div>
+            <div>
+                <label for="address"></label>
+                <input type="textCF" id="address" name="address" placeholder="Address:"></input>
+            </div>
+
+            <input type="submit"></input>
+            <div id="validation-errors"></div>
+            <div id="validation-success"></div>
+
+        </form>
+    </main>
+    <script src="/src/JS/contactForm.js"></script>
+</body>
+
+</html>
